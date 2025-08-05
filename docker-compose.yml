@@ -77,7 +77,7 @@ services:
       QUERY_DEFAULTS_LIMIT: 25
       QUERY_MAXIMUM_RESULTS: 500001
       AUTHENTICATION_APIKEY_ENABLED: 'true'
-      # It is recommended to leave this key as is, it is the default key for connecting the academicid service to weaviate. If you update this key, you will need to uncomment update the `WEAVIATE_API_KEY` environment variable in the .env file
+      # It is recommended to leave this key as is; it is the default key for connecting the academicid service to Weaviate. If you update this key, you will need to uncomment and update the `WEAVIATE_API_KEY` environment variable in the .env file
       AUTHENTICATION_APIKEY_ALLOWED_KEYS: '@5D%t$3b49NWx'
       AUTHENTICATION_APIKEY_USERS: 'academicid'
       AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'false'
@@ -130,7 +130,7 @@ services:
   certgen:
     image: alpine:3.20
     entrypoint: >
-      sh -c " apk add --no-cache openssl; sh /certgen/gen.sh "
+      sh -c " apk add --no-cache bash; apk add --no-cache openssl; sh /certgen/gen.sh "
     volumes:
       - ./certs:/certs
       - ./certgen/gen.sh:/certgen/gen.sh:ro

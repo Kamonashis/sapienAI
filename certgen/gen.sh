@@ -1,4 +1,8 @@
-#!/bin/sh
+#!/bin/bash
+# Ensure script runs with Bash, even if invoked with sh or another shell
+if [ -z "$BASH_VERSION" ]; then
+  exec /bin/bash "$0" "$@"
+fi
 set -e
 CA_DIR=/certs
 
