@@ -1,1 +1,1 @@
-{"BucketedData":{},"SumData":{},"CountData":{},"ObjectCount":0}
+{"BucketedData":{"authType":{"0":1},"email":{"2":1},"name":{"1":1},"tenantStatus":{"0":1}},"SumData":{"authType":1,"email":3,"name":2,"tenantStatus":1},"CountData":{"authType":1,"email":1,"name":1,"tenantStatus":1},"ObjectCount":0}
